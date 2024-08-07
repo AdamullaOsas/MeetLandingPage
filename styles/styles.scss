@@ -1,0 +1,244 @@
+$cyan-600: #4d96a9;
+$cyan-300: #8fe3f9;
+
+$purple-600: #855fb1;
+$purple-300: #d9b8ff;
+
+$slate-900: #28283d;
+$slate-600: #87879d;
+$slate-300: #d1d1df;
+
+$white: #fafafa;
+
+$btn-cyan-hover: #71c0d4;
+$btn-purple-hover: #b18bdd;
+
+@mixin text-preset-1 {
+    font-size: 64px;
+    line-height: 1.1;
+    letter-spacing: 0px;
+    color: $slate-900;
+}
+@mixin text-preset-2 {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0px;
+    color: $slate-900;
+}
+@mixin text-preset-3 {
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 4px;
+    color: $cyan-600;
+}
+@mixin text-preset-4 {
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0px;
+    color: $slate-900;
+}
+@mixin text-preset-5 {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    color: $slate-900;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background-color: $white;
+    margin: 0;
+
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .logoWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+
+            img {
+                width: 118px;
+            }
+        }
+
+        .headContent {
+            display: flex;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Ensure overflow is hidden */
+
+            position: relative; /* Ensure the container positions its children correctly */
+
+            .hero-left,
+            .hero-right {
+                max-width: 394px;
+                position: absolute;
+                object-fit: cover;
+            }
+
+            .hero-left {
+                left: -26px;
+                top: 0;
+            }
+
+            .hero-right {
+                right: -26px;
+                bottom: 0;
+            }
+
+            .wrapper {
+                margin: 64px 160px;
+
+                .title {
+                    margin: 23px 335.85px;
+                    text-align: center;
+                    max-width: 448px;
+
+                    h1 {
+                        @include text-preset-1;
+                        margin: 23px auto;
+                    }
+
+                    p {
+                        @include text-preset-4;
+                        margin: 32px 0;
+                        padding: 0 5px;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        justify-content: center;
+                        gap: 17px;
+
+                        button {
+                            padding: 16px 40px;
+                            border-radius: 29px;
+                            border: none;
+                            @include text-preset-5;
+                            color: $white;
+                            font-weight: bold;
+                        }
+
+                        .first {
+                            background-color: $cyan-600;
+
+                            span {
+                                color: $cyan-300;
+                            }
+
+                            &:hover {
+                                background-color: $btn-cyan-hover;
+                            }
+                        }
+
+                        .second {
+                            background-color: $purple-600;
+
+                            &:hover {
+                                background-color: $btn-purple-hover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .wrapper {
+            margin: 56px 160px 72px;
+            position: relative;
+
+            .component {
+                margin: 0;
+                height: 136px;
+                @include text-preset-5;
+                font-weight: bold;
+                color: $slate-600;
+
+                .verticalLine {
+                    border-left: 1px solid $slate-600;
+                    height: 80px;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -3px;
+                    top: 0;
+                }
+
+                .circle {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    border: 1px solid $slate-600;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -31.5px;
+                    top: 80px;
+                }
+            }
+
+            .images {
+                margin: 64px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    max-width: 256px;
+                    max-height: 256px;
+                    border-radius: 10px;
+                }
+            }
+
+            .desc {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 288px;
+
+                .title {
+                    text-align: center;
+                    gap: 16px;
+
+                    p {
+                        margin: 0;
+                        @include text-preset-3();
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+
+                    h1 {
+                        @include text-preset-2();
+                        margin: 0;
+                        margin-top: 16px;
+                        max-width: 445px;
+                    }
+                }
+
+                p {
+                    @include text-preset-4();
+                    color: $slate-600;
+                    text-align: center;
+                    margin: 32px 0 0;
+                    max-width: 554px;
+
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
