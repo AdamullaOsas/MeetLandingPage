@@ -1,4 +1,4 @@
-$cyan-600: #4d96a9;
+$cyan-600: #4d96a8;
 $cyan-300: #8fe3f9;
 
 $purple-600: #855fb1;
@@ -70,9 +70,9 @@ body {
             width: 100vw;
             align-items: center;
             justify-content: center;
-            overflow: hidden; /* Ensure overflow is hidden */
+            overflow: hidden;
 
-            position: relative; /* Ensure the container positions its children correctly */
+            position: relative;
 
             .hero-left,
             .hero-right {
@@ -100,14 +100,17 @@ body {
                     max-width: 448px;
 
                     h1 {
-                        @include text-preset-1;
+                        @include text-preset-1();
                         margin: 23px auto;
                     }
 
                     p {
-                        @include text-preset-4;
-                        margin: 32px 0;
-                        padding: 0 5px;
+                        @include text-preset-4();
+                        color: $slate-600;
+                        text-align: center;
+                        margin: 18px 10px;
+                        max-width: 448px;
+                        line-height: 1.5;
                     }
 
                     .buttons {
@@ -237,6 +240,106 @@ body {
                     max-width: 554px;
 
                     line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    footer {
+        position: relative;
+        .component {
+            margin: 0;
+            height: 136px;
+            @include text-preset-5;
+            font-weight: bold;
+            color: $slate-600;
+
+            .verticalLine {
+                border-left: 1px solid $slate-600;
+                height: 80px;
+                position: absolute;
+                left: 50%;
+                margin-left: -3px;
+                top: 0;
+            }
+
+            .circle {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                border: 1px solid $slate-600;
+                background-color: $white;
+                z-index: 9;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                position: absolute;
+                left: 50%;
+                margin-left: -31.5px;
+                top: 80px;
+            }
+        }
+
+        .text {
+            background-image: url("/assets/desktop/image-footer.jpg");
+            background-size: cover;
+            background-position: center;
+
+            position: absolute;
+            top: 108px;
+            width: 100%;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgb(77, 150, 168, 0.9);
+                z-index: 1;
+            }
+
+            .wrapper {
+                margin: 112px 160px;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                z-index: 2;
+
+                h1 {
+                    @include text-preset-2();
+                    color: $white;
+                    max-width: 445px;
+                    margin: 0;
+                }
+
+                p {
+                    @include text-preset-4();
+                    color: $white;
+                    line-height: 1.5;
+                    max-width: 355px;
+                    margin: 0;
+                }
+
+                button {
+                    padding: 16px 40px;
+                    border-radius: 29px;
+                    border: none;
+                    @include text-preset-5;
+                    color: $white;
+                    font-weight: bold;
+                    background-color: $purple-600;
+                    margin-bottom: 32px;
+
+                    span {
+                        color: $purple-300;
+                    }
+
+                    &:hover {
+                        background-color: $btn-purple-hover;
+                    }
                 }
             }
         }

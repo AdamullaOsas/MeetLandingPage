@@ -22,8 +22,8 @@ body header .headContent {
   width: 100vw;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ensure overflow is hidden */
-  position: relative; /* Ensure the container positions its children correctly */
+  overflow: hidden;
+  position: relative;
 }
 body header .headContent .hero-left,
 body header .headContent .hero-right {
@@ -60,8 +60,11 @@ body header .headContent .wrapper .title p {
   line-height: 1.1;
   letter-spacing: 0px;
   color: #28283d;
-  margin: 32px 0;
-  padding: 0 5px;
+  color: #87879d;
+  text-align: center;
+  margin: 18px 10px;
+  max-width: 448px;
+  line-height: 1.5;
 }
 body header .headContent .wrapper .title .buttons {
   display: flex;
@@ -80,7 +83,7 @@ body header .headContent .wrapper .title .buttons button {
   font-weight: bold;
 }
 body header .headContent .wrapper .title .buttons .first {
-  background-color: #4d96a9;
+  background-color: #4d96a8;
 }
 body header .headContent .wrapper .title .buttons .first span {
   color: #8fe3f9;
@@ -160,7 +163,7 @@ body main .wrapper .desc .title p {
   font-size: 16px;
   line-height: 1.1;
   letter-spacing: 4px;
-  color: #4d96a9;
+  color: #4d96a8;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -183,4 +186,103 @@ body main .wrapper .desc p {
   margin: 32px 0 0;
   max-width: 554px;
   line-height: 1.5;
+}
+body footer {
+  position: relative;
+}
+body footer .component {
+  margin: 0;
+  height: 136px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  color: #28283d;
+  font-weight: bold;
+  color: #87879d;
+}
+body footer .component .verticalLine {
+  border-left: 1px solid #87879d;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+body footer .component .circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #87879d;
+  background-color: #fafafa;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -31.5px;
+  top: 80px;
+}
+body footer .text {
+  background-image: url("/assets/desktop/image-footer.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 108px;
+  width: 100%;
+}
+body footer .text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(77, 150, 168, 0.9);
+  z-index: 1;
+}
+body footer .text .wrapper {
+  margin: 112px 160px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+body footer .text .wrapper h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: 0px;
+  color: #28283d;
+  color: #fafafa;
+  max-width: 445px;
+  margin: 0;
+}
+body footer .text .wrapper p {
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0px;
+  color: #28283d;
+  color: #fafafa;
+  line-height: 1.5;
+  max-width: 355px;
+  margin: 0;
+}
+body footer .text .wrapper button {
+  padding: 16px 40px;
+  border-radius: 29px;
+  border: none;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  color: #28283d;
+  color: #fafafa;
+  font-weight: bold;
+  background-color: #855fb1;
+  margin-bottom: 32px;
+}
+body footer .text .wrapper button span {
+  color: #d9b8ff;
+}
+body footer .text .wrapper button:hover {
+  background-color: #b18bdd;
 }/*# sourceMappingURL=styles.css.map */
