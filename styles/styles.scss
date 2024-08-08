@@ -119,6 +119,7 @@ body {
                         gap: 17px;
 
                         button {
+                            min-width: 193px;
                             padding: 16px 40px;
                             border-radius: 29px;
                             border: none;
@@ -324,6 +325,7 @@ body {
                 }
 
                 button {
+                    min-width: 193px;
                     padding: 16px 40px;
                     border-radius: 29px;
                     border: none;
@@ -340,6 +342,130 @@ body {
                     &:hover {
                         background-color: $btn-purple-hover;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        header {
+            .logo {
+                margin-top: 48px auto;
+            }
+            .headContent {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                .wrapper {
+                    margin: 375px 115.85px 0;
+                }
+
+                .hero-right {
+                    top: 64px;
+                }
+                .hero-left {
+                    top: 64px;
+                }
+            }
+        }
+
+        main {
+            .wrapper {
+                margin: 56px 44px 64px;
+
+                .images {
+                    img {
+                        height: 160px;
+                        width: 152px;
+                    }
+                }
+
+                .desc {
+                    margin: 64px 88px 0;
+                }
+            }
+        }
+
+        footer {
+            .text {
+                .wrapper {
+                    margin: 64px auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    row-gap: 24px;
+
+                    h1,
+                    p {
+                        max-width: 504px;
+                        text-align: center;
+                    }
+                    button {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        header {
+            .headContent {
+                .hero-left,
+                .hero-right {
+                    max-width: 208.05px;
+                }
+
+                .wrapper {
+                    max-width: 305px;
+                    margin-top: 250px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .title {
+                        margin: 0;
+                        max-width: 305px;
+
+                        .buttons {
+                            flex-direction: column;
+                            align-items: center;
+
+                            .second {
+                                min-width: 0;
+                                width: 161px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            .wrapper {
+                .images {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 16px;
+                }
+
+                .desc {
+                    margin: 64px 40px 0;
+                }
+            }
+        }
+
+        footer {
+            .text {
+                .wrapper {
+                    margin: 64px 32px;
                 }
             }
         }

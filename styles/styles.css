@@ -72,6 +72,7 @@ body header .headContent .wrapper .title .buttons {
   gap: 17px;
 }
 body header .headContent .wrapper .title .buttons button {
+  min-width: 193px;
   padding: 16px 40px;
   border-radius: 29px;
   border: none;
@@ -268,6 +269,7 @@ body footer .text .wrapper p {
   margin: 0;
 }
 body footer .text .wrapper button {
+  min-width: 193px;
   padding: 16px 40px;
   border-radius: 29px;
   border: none;
@@ -285,4 +287,87 @@ body footer .text .wrapper button span {
 }
 body footer .text .wrapper button:hover {
   background-color: #b18bdd;
+}
+
+@media (max-width: 1200px) {
+  body header .logo {
+    margin-top: 48px auto;
+  }
+  body header .headContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  body header .headContent .wrapper {
+    margin: 375px 115.85px 0;
+  }
+  body header .headContent .hero-right {
+    top: 64px;
+  }
+  body header .headContent .hero-left {
+    top: 64px;
+  }
+  body main .wrapper {
+    margin: 56px 44px 64px;
+  }
+  body main .wrapper .images img {
+    height: 160px;
+    width: 152px;
+  }
+  body main .wrapper .desc {
+    margin: 64px 88px 0;
+  }
+  body footer .text .wrapper {
+    margin: 64px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 24px;
+  }
+  body footer .text .wrapper h1,
+  body footer .text .wrapper p {
+    max-width: 504px;
+    text-align: center;
+  }
+  body footer .text .wrapper button {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  body header .headContent .hero-left,
+  body header .headContent .hero-right {
+    max-width: 208.05px;
+  }
+  body header .headContent .wrapper {
+    max-width: 305px;
+    margin-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body header .headContent .wrapper .title {
+    margin: 0;
+    max-width: 305px;
+  }
+  body header .headContent .wrapper .title .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  body header .headContent .wrapper .title .buttons .second {
+    min-width: 0;
+    width: 161px;
+  }
+  body main .wrapper .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  body main .wrapper .desc {
+    margin: 64px 40px 0;
+  }
+  body footer .text .wrapper {
+    margin: 64px 32px;
+  }
 }/*# sourceMappingURL=styles.css.map */
